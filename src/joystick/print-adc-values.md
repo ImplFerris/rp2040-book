@@ -9,10 +9,10 @@ The goal here is simple. We want to see how the physical movement of the joystic
 We will start by generating a new project using the template.
 
 ```sh
-cargo generate --git https://github.com/ImplFerris/pico-template.git --tag v0.3.2
+cargo generate --git https://github.com/ImplFerris/rp2040-embassy-template.git --tag v0.1.4
 ```
 
-When prompted, give your project a name, for example joystick-adc, and select embassy as the HAL.
+When prompted, give your project a name, for example joystick-adc.
 
 If you have a debug probe, you can enable defmt and logging will be straightforward. If you do not have a debug probe, disable defmt and use USB serial output, just like we did in the previous chapter. We will not repeat those steps here so that we can stay focused on the joystick and ADC setup.
 
