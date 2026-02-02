@@ -1,0 +1,29 @@
+[book]
+title = "impl Rust for Pico - Embedded Programming with Rust"
+authors = ["ImplFerris"]
+language = "en"
+src = "src"
+
+[output.html]
+git-repository-url = "https://github.com/ImplFerris/rp2040-book"
+cname = "rp2040.implrust.com"
+preferred-dark-theme = "ayu"
+default-theme = "light"
+mathjax-support = true
+
+# Don't show table of contents for entire page in the navigation bar
+# Pretty confusing to look at the chapter 
+sidebar-header-nav = false
+
+additional-css = ["theme/css/custom.css", "theme/tabs.css"]
+additional-js = ["theme/tabs.js"]
+
+
+[output.html.fold]
+enable = true
+level = 1     # the depth to start folding
+
+[output.html.playground]
+editable = true
+
+[preprocessor.tabs]
