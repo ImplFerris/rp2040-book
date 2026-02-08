@@ -61,6 +61,9 @@ From this point onward, this pin is no longer controlled by the CPU GPIO periphe
 
 Now we define our PIO program using the `pio_asm!` macro. This is the same program we developed earlier, including instruction delays to produce a visible blink.
 
+> [!Note]
+> The pio_asm! macro and other related PIO functions come from the crate called [pio](https://docs.rs/crate/pio/latest). The Embassy HAL re-exports these, so you can use them directly without adding pio as a direct dependency in your project.
+
 ```rust
 let prg = pio_asm!(
     "
