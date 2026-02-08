@@ -148,3 +148,13 @@ You can clone (or refer) project I created and navigate to the `hello-blinky` fo
 git clone https://github.com/ImplFerris/rp2040-projects
 cd rp2040-projects/embassy/pio/hello-blinky/
 ```
+
+## Using a USB logic analyzer
+
+By the way, I have been writing a series of blog posts while playing with a USB logic analyzer. I bought it recently and ended up using it to inspect almost everything.
+
+I have created one blog post where I analyze this exact PIO blink program using a USB logic analyzer. In that post, I capture the real signal coming from the Pico and measure the HIGH and LOW timings on real hardware. I also calculate how much time the PIO instructions should take and compare that with what is captured using the logic analyzer.
+
+You can check it out here:
+
+[https://blog.implrust.com/posts/2026/02/logic-analyzer-raspberry-pi-pico-pio/](https://blog.implrust.com/posts/2026/02/logic-analyzer-raspberry-pi-pico-pio/)
