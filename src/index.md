@@ -9,7 +9,7 @@ We will be using the Raspberry Pi Pico, which is part of the Raspberry Pi Pico s
 You find more details from the [official website](https://www.raspberrypi.com/products/raspberry-pi-pico/).
 
 <div class="image-with-caption" style="text-align:center;">
-    <img src="./images/pico.png" alt="Raspberry Pi Debug 2" style="width:400px; height:auto; display:block; margin:auto;"/>
+    <img src="./images/pico.png" alt="Raspberry Pi Pico" style="width:400px; height:auto; display:block; margin:auto;"/>
     <div class="caption" style="font-size:0.9em; color:#555; margin-top:6px;">Raspberry Pi Pico</div>
 </div>
 

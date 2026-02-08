@@ -141,10 +141,21 @@
     - [Pin layout](./joystick/pin-layout.md)
     - [Circuit](./joystick/circuit.md)
     - [Print ADC Values](./joystick/print-adc-values.md)
+- [PIO](./pio/index.md)
+    - [How it works?](./pio/how-it-works.md)
+        - [Clock Divider](./pio/internals/clock-divider.md)
+    - [Blinky with PIO](./pio/blinky/assembly.md)
+        - [In embassy](./pio/blinky/embedded-rust-in-embassy.md)
+        - [Program Wrapping](./pio/blinky/wrap-wrap-target.md)
 <!-- - [Debugging](./debugging/index.md)
     - [GDB](./debugging/gdb/probe-rs-debug-probe.md)
         - [Finding main](./debugging/gdb/finding-main.md)
         - [Breakpoints](./debugging/gdb/analyze-led-loop.md)
         - [Atomic Register](./debugging/gdb/atomic-gpio-set.md) -->
 <!-- - [Projects](./projects.md) -->
+
+# 🛜 Pico W
+
+- [Pico W Introduction](./pico-w/introduction.md)
+
 - [Resources](./resources.md)
