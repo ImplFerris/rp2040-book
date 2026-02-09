@@ -147,6 +147,7 @@
     - [Blinky with PIO](./pio/blinky/assembly.md)
         - [In embassy](./pio/blinky/embedded-rust-in-embassy.md)
         - [Program Wrapping](./pio/blinky/wrap-wrap-target.md)
+        - [Scratch Registers](./pio/blinky/scratch-registers.md)   
 <!-- - [Debugging](./debugging/index.md)
     - [GDB](./debugging/gdb/probe-rs-debug-probe.md)
         - [Finding main](./debugging/gdb/finding-main.md)
