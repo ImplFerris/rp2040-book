@@ -19,6 +19,10 @@ delay:
     jmp x--, delay ; decrement X and jump (1 cycle)
 ```
 
+> [!Note]
+> When using the `pio_asm!` macro, trying to load a value larger than 31 (for example `set x, 32`) will result in a compile-time error such as:
+> `SET argument out of range`.
+
 Here, X starts at 31 and counts down to zero. Each time the `jmp x--, delay` instruction executes, the jump condition is evaluated first. If X is nonzero, execution jumps back to the label, with X being decremented as part of the same instruction. When X is zero at the test, the jump is not taken and the loop exits.
 
 Although the X and Y registers are 32-bit wide, the `set` instruction can only load immediate values from 0 to 31. With `jmp x--`, the loop executes exactly the number of times loaded into X. With X set to 31, it results in 31 loop iterations.
