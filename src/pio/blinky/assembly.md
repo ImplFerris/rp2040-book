@@ -16,11 +16,11 @@ loop:
     jmp loop
 ```
 
-The first instruction, `set pindirs, 1`, configures the selected pin as an output.
+The first instruction, `set pindirs, 1`, configures the selected pin as an output. Using zero would configure the pin as an input. Since we are driving an LED, we set the pin direction to output (value 1).
 
 Next, we define a label called `loop:`. This is not an instruction. It is just a marker that points to a location in the program. You can jump back to this location using `jmp loop`. You can name the label anything you want, as long as it follows the usual naming rules.
 
-Inside the loop, `set pins, 1` drives the pin HIGH and `set pins, 0` drives it LOW.
+The `set pins, VALUE` instruction writes a value to the pins controlled by the state machine. For a single configured pin, a value of 1 drives the pin HIGH and a value of 0 drives it LOW.
 
 ## RP2040/RP2350 PIO Simulator
 
