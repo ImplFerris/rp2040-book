@@ -24,7 +24,7 @@ The `set pins, VALUE` instruction writes a value to the pins controlled by the s
 
 ## RP2040/RP2350 PIO Simulator
 
-There is a nice R[P2040 and RP2350 PIO simulator](https://ice458.github.io/tools/pio_sim/index.html) that we can use to visualize and understand PIO behavior. You can paste the assembly code into the simulator, click "Assemble & Reset", and then click "Run". The simulator animates each instruction as it executes and shows the output level of the GPIO pins over time. Do not worry about the other options for now.
+There is a nice [RP2040 and RP2350 PIO simulator](https://ice458.github.io/tools/pio_sim/index.html) that we can use to visualize and understand PIO behavior. You can paste the assembly code into the simulator, click "Assemble & Reset", and then click "Run". The simulator animates each instruction as it executes and shows the output level of the GPIO pins over time. Do not worry about the other options for now.
 
 <div class="image-with-caption" style="text-align:center;">
     <img src="../images/Raspberry Pi Pico PIO simulator.png" alt="Raspberry Pi Pico PIO simulator" style="height:auto; display:block; margin:auto;"/>
