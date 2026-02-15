@@ -16,6 +16,15 @@ Generate a new project using the custom Embassy template.
 cargo generate --git https://github.com/ImplFerris/rp2040-embassy-template.git --tag v0.1.4
 ```
 
+## Additional Imports
+
+```rust
+use embassy_rp::bind_interrupts;
+use embassy_rp::peripherals::PIO0;
+use embassy_rp::pio::program::pio_asm;
+use embassy_rp::pio::{Config, InterruptHandler, Pio};
+```
+
 ## Binding the PIO Interrupt
 
 PIO uses interrupts internally, so we must bind the PIO interrupt handler before using it. We bind interrupt `PIO0_IRQ_0` to the Embassy PIO interrupt handler.
@@ -28,13 +37,12 @@ bind_interrupts!(struct Irqs {
 
 At this point, we are not directly handling interrupts ourselves. Embassy uses this internally to manage PIO safely.
 
-
 ## Creating the PIO Block and State Machine
 
 We initialize PIO block 0 and split it into its shared part and one state machine.
 
 ```rust
- let pio = p.PIO0;
+let pio = p.PIO0;
 let Pio {
     mut common,
     mut sm0,
@@ -161,3 +169,89 @@ I have created one blog post where I analyze this exact PIO blink program using 
 You can check it out here:
 
 [https://blog.implrust.com/posts/2026/02/logic-analyzer-raspberry-pi-pico-pio/](https://blog.implrust.com/posts/2026/02/logic-analyzer-raspberry-pi-pico-pio/)
+
+## The Full code
+
+```rust
+#![no_std]
+#![no_main]
+
+use embassy_executor::Spawner;
+use embassy_time::Timer;
+
+// defmt Logging
+use defmt::info;
+use defmt_rtt as _;
+
+use panic_probe as _;
+
+use embassy_rp::bind_interrupts;
+use embassy_rp::peripherals::PIO0;
+use embassy_rp::pio::program::pio_asm;
+use embassy_rp::pio::{Config, InterruptHandler, Pio};
+
+bind_interrupts!(struct Irqs {
+    PIO0_IRQ_0 => InterruptHandler<PIO0>;
+});
+
+#[embassy_executor::main]
+async fn main(_spawner: Spawner) {
+    let p = embassy_rp::init(Default::default());
+    info!("Initializing the program");
+
+    let pio = p.PIO0;
+    let Pio {
+        mut common,
+        mut sm0,
+        ..
+    } = Pio::new(pio, Irqs);
+
+    let out_pin = common.make_pio_pin(p.PIN_15);
+
+    let prg = pio_asm!(
+        "
+        set pindirs, 1
+        loop:
+        set pins, 1 [31]
+        nop [31]
+        nop [31]
+        nop [31]
+        nop [31]
+        nop [31]
+        nop [31]
+        nop [31]
+        set pins, 0 [30]
+        nop [31]
+        nop [31]
+        nop [31]
+        nop [31]
+        nop [31]
+        nop [31]
+        nop [31]
+        jmp loop
+        "
+    );
+
+    let mut cfg = Config::default();
+    cfg.use_program(&common.load_program(&prg.program), &[]);
+    cfg.set_set_pins(&[&out_pin]);
+    cfg.clock_divider = 65535u16.into();
+    sm0.set_config(&cfg);
+
+    sm0.set_enable(true);
+
+    let mut counter: u8 = 0;
+    info!("Counter that running on main cpu - not related to the  PIO");
+    loop {
+        info!("Count: {}", counter);
+
+        counter = counter.wrapping_add(1);
+
+        if counter == 0 {
+            info!("Wrapped the counter");
+        }
+
+        Timer::after_millis(100).await;
+    }
+}
+```

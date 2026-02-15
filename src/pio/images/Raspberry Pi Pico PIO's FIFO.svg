@@ -1,0 +1,154 @@
+<!--
+Copyright (c) 2026 implrust.com
+All rights reserved.
+
+This SVG diagram is part of the ImplRust project.
+Website: https://implrust.com
+Github: https://github.com/ImplFerris/
+
+Permission is granted to use, copy, and modify this file for
+educational and documentation purposes, provided this notice
+is retained.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 350">
+  <style>
+    /* Light mode (default) */
+    .bg { fill: #ffffff; }
+    .title-text { fill: #333333; }
+    .subtitle-text { fill: #666666; }
+    .cpu-block { fill: #4A90E2; stroke: #2E5C8A; }
+    .cpu-text { fill: #ffffff; }
+    .sm-block { fill: #9C27B0; stroke: #6A1B9A; }
+    .sm-text { fill: #ffffff; }
+    
+    .tx-slot { fill: #E8F5E9; stroke: #4CAF50; }
+    .tx-text { fill: #2E7D32; }
+    .tx-arrow { stroke: #4CAF50; }
+    .tx-arrow-marker { fill: #4CAF50; }
+    
+    .rx-slot { fill: #FFF3E0; stroke: #FF9800; }
+    .rx-text { fill: #E65100; }
+    .rx-arrow { stroke: #FF9800; }
+    .rx-arrow-marker { fill: #FF9800; }
+    
+    .connection-line { stroke: #666666; }
+    .info-box { fill: #F5F5F5; stroke: #999999; }
+    .info-text { fill: #333333; }
+    .info-detail { fill: #666666; }
+    
+    /* Dark mode */
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #1a1a1a; }
+      .title-text { fill: #E0E0E0; }
+      .subtitle-text { fill: #AAAAAA; }
+      .cpu-block { fill: #3A7BC8; stroke: #5A9BD8; }
+      .cpu-text { fill: #ffffff; }
+      .sm-block { fill: #7B1FA2; stroke: #9C27B0; }
+      .sm-text { fill: #ffffff; }
+      
+      .tx-slot { fill: #2D4A2C; stroke: #66BB6A; }
+      .tx-text { fill: #81C784; }
+      .tx-arrow { stroke: #66BB6A; }
+      .tx-arrow-marker { fill: #66BB6A; }
+      
+      .rx-slot { fill: #4A3A2D; stroke: #FFA726; }
+      .rx-text { fill: #FFB74D; }
+      .rx-arrow { stroke: #FFA726; }
+      .rx-arrow-marker { fill: #FFA726; }
+      
+      .connection-line { stroke: #888888; }
+      .info-box { fill: #2A2A2A; stroke: #555555; }
+      .info-text { fill: #E0E0E0; }
+      .info-detail { fill: #AAAAAA; }
+    }
+  </style>
+  
+  <!-- Background -->
+  <rect width="800" height="450" class="bg"/>
+  
+  
+  <!-- CPU Block -->
+  <rect x="50" y="130" width="120" height="140" class="cpu-block" stroke-width="2" rx="5"/>
+  <text x="110" y="190" text-anchor="middle" font-size="18" font-weight="bold" class="cpu-text">CPU</text>
+  <text x="110" y="215" text-anchor="middle" font-size="12" class="cpu-text">Main</text>
+  <text x="110" y="230" text-anchor="middle" font-size="12" class="cpu-text">Program</text>
+  
+  <!-- TX FIFO (CPU to State Machine) -->
+  <g>
+    <text x="400" y="50" text-anchor="middle" font-size="16" font-weight="bold" class="title-text">
+      TX FIFO (Transmit)
+    </text>
+    <text x="400" y="70" text-anchor="middle" font-size="12" class="subtitle-text">
+      CPU → State Machine
+    </text>
+    
+    <!-- FIFO Slots - showing "impl" -->
+    <rect x="250" y="90" width="70" height="50" class="tx-slot" stroke-width="2" rx="3"/>
+    <rect x="330" y="90" width="70" height="50" class="tx-slot" stroke-width="2" rx="3"/>
+    <rect x="410" y="90" width="70" height="50" class="tx-slot" stroke-width="2" rx="3"/>
+    <rect x="490" y="90" width="70" height="50" class="tx-slot" stroke-width="2" rx="3"/>
+    
+    <text x="285" y="120" text-anchor="middle" font-size="14" class="tx-text">0x69</text>
+    <text x="365" y="120" text-anchor="middle" font-size="14" class="tx-text">0x6D</text>
+    <text x="445" y="120" text-anchor="middle" font-size="14" class="tx-text">0x70</text>
+    <text x="525" y="120" text-anchor="middle" font-size="14" class="tx-text">0x6C</text>
+    
+    <!-- Arrows showing direction -->
+    <path d="M 200 115 L 240 115" class="tx-arrow" stroke-width="3" fill="none" marker-end="url(#arrowgreen)"/>
+    <text x="220" y="105" text-anchor="middle" font-size="11" class="tx-text" font-weight="bold">IN</text>
+    
+    <path d="M 570 115 L 610 115" class="tx-arrow" stroke-width="3" fill="none" marker-end="url(#arrowgreen)"/>
+    <text x="590" y="105" text-anchor="middle" font-size="11" class="tx-text" font-weight="bold">OUT</text>
+  </g>
+  
+  <!-- RX FIFO (State Machine to CPU) -->
+  <g>
+    <text x="400" y="230" text-anchor="middle" font-size="16" font-weight="bold" class="title-text">
+      RX FIFO (Receive)
+    </text>
+    <text x="400" y="250" text-anchor="middle" font-size="12" class="subtitle-text">
+      CPU ← State Machine 
+    </text>
+    
+    <!-- FIFO Slots - showing "Rust" -->
+    <rect x="250" y="270" width="70" height="50" class="rx-slot" stroke-width="2" rx="3"/>
+    <rect x="330" y="270" width="70" height="50" class="rx-slot" stroke-width="2" rx="3"/>
+    <rect x="410" y="270" width="70" height="50" class="rx-slot" stroke-width="2" rx="3"/>
+    <rect x="490" y="270" width="70" height="50" class="rx-slot" stroke-width="2" rx="3"/>
+    
+    <text x="285" y="300" text-anchor="middle" font-size="14" class="rx-text">0x52</text>
+    <text x="365" y="300" text-anchor="middle" font-size="14" class="rx-text">0x75</text>
+    <text x="445" y="300" text-anchor="middle" font-size="14" class="rx-text">0x73</text>
+    <text x="525" y="300" text-anchor="middle" font-size="14" class="rx-text">0x74</text>
+    
+    <!-- Arrows showing direction -->
+    <path d="M 610 295 L 570 295" class="rx-arrow" stroke-width="3" fill="none" marker-end="url(#arroworange)"/>
+    <text x="590" y="285" text-anchor="middle" font-size="11" class="rx-text" font-weight="bold">IN</text>
+    
+    <path d="M 240 295 L 200 295" class="rx-arrow" stroke-width="3" fill="none" marker-end="url(#arroworange)"/>
+    <text x="220" y="285" text-anchor="middle" font-size="11" class="rx-text" font-weight="bold">OUT</text>
+  </g>
+  
+  <!-- State Machine Block -->
+  <rect x="630" y="130" width="120" height="140" class="sm-block" stroke-width="2" rx="5"/>
+  <text x="690" y="190" text-anchor="middle" font-size="16" font-weight="bold" class="sm-text">State</text>
+  <text x="690" y="210" text-anchor="middle" font-size="16" font-weight="bold" class="sm-text">Machine</text>
+  <text x="690" y="235" text-anchor="middle" font-size="12" class="sm-text">PIO0 SM0</text>
+  
+  <!-- Connection lines -->
+  <path d="M 170 170 L 200 115" class="connection-line" stroke-width="2" fill="none" stroke-dasharray="5,5"/>
+  <path d="M 170 230 L 200 295" class="connection-line" stroke-width="2" fill="none" stroke-dasharray="5,5"/>
+  <path d="M 630 170 L 610 115" class="connection-line" stroke-width="2" fill="none" stroke-dasharray="5,5"/>
+  <path d="M 630 230 L 610 295" class="connection-line" stroke-width="2" fill="none" stroke-dasharray="5,5"/>
+  
+  
+  <!-- Arrow markers -->
+  <defs>
+    <marker id="arrowgreen" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" class="tx-arrow-marker"/>
+    </marker>
+    <marker id="arroworange" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" class="rx-arrow-marker"/>
+    </marker>
+  </defs>
+</svg>

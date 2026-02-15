@@ -1,0 +1,158 @@
+<!--
+Copyright (c) 2026 implrust.com
+All rights reserved.
+
+This SVG diagram is part of the ImplRust project.
+Website: https://implrust.com
+Github: https://github.com/ImplFerris/
+
+Permission is granted to use, copy, and modify this file for
+educational and documentation purposes, provided this notice
+is retained.
+-->
+<svg viewBox="0 0 800 270" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    /* Light mode (default) */
+    .bg { fill: #ffffff; }
+    .title-text { fill: #333333; }
+    .subtitle-text { fill: #666666; }
+    .cpu-block { fill: #4A90E2; stroke: #2E5C8A; }
+    .cpu-text { fill: #ffffff; }
+    .sm-block { fill: #9C27B0; stroke: #6A1B9A; }
+    .sm-text { fill: #ffffff; }
+    
+    .tx-slot { fill: #E8F5E9; stroke: #4CAF50; }
+    .tx-text { fill: #2E7D32; }
+    .tx-arrow { stroke: #4CAF50; }
+    .tx-arrow-marker { fill: #4CAF50; }
+    
+    .rx-slot { fill: #FFF3E0; stroke: #FF9800; }
+    .rx-text { fill: #E65100; }
+    .rx-arrow { stroke: #FF9800; }
+    .rx-arrow-marker { fill: #FF9800; }
+    
+    .connection-line { stroke: #666666; }
+    .info-box { fill: #F5F5F5; stroke: #999999; }
+    .info-text { fill: #333333; }
+    .info-detail { fill: #666666; }
+    
+    /* Dark mode */
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #1a1a1a; }
+      .title-text { fill: #E0E0E0; }
+      .subtitle-text { fill: #AAAAAA; }
+      .cpu-block { fill: #3A7BC8; stroke: #5A9BD8; }
+      .cpu-text { fill: #ffffff; }
+      .sm-block { fill: #7B1FA2; stroke: #9C27B0; }
+      .sm-text { fill: #ffffff; }
+      
+      .tx-slot { fill: #2D4A2C; stroke: #66BB6A; }
+      .tx-text { fill: #81C784; }
+      .tx-arrow { stroke: #66BB6A; }
+      .tx-arrow-marker { fill: #66BB6A; }
+      
+      .rx-slot { fill: #4A3A2D; stroke: #FFA726; }
+      .rx-text { fill: #FFB74D; }
+      .rx-arrow { stroke: #FFA726; }
+      .rx-arrow-marker { fill: #FFA726; }
+      
+      .connection-line { stroke: #888888; }
+      .info-box { fill: #2A2A2A; stroke: #555555; }
+      .info-text { fill: #E0E0E0; }
+      .info-detail { fill: #AAAAAA; }
+    }
+  </style>
+
+  <!-- Background -->
+  <rect width="800" height="300" class="bg"/>
+  
+  <!-- Title -->
+  <text x="400" y="30" font-size="20" font-weight="bold" text-anchor="middle" class="title-text">
+    PIO FIFO Data Pipeline
+  </text>
+  
+  <!-- CPU Block -->
+  <rect x="20" y="80" width="85" height="80" class="cpu-block" stroke-width="2" rx="5"/>
+  <text x="62.5" y="120" font-size="16" font-weight="bold" text-anchor="middle" class="cpu-text">CPU</text>
+  <text x="62.5" y="140" font-size="10" text-anchor="middle" class="cpu-text" opacity="0.8">wait_push()</text>
+  
+  <!-- Arrow markers -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" class="connection-line"/>
+    </marker>
+    <marker id="arrowhead-autofill" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" class="rx-arrow-marker"/>
+    </marker>
+  </defs>
+  
+  <!-- Arrow 1: CPU to FIFO -->
+  <line x1="105" y1="120" x2="180" y2="120" class="connection-line" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="142.5" y="110" font-size="11" text-anchor="middle" class="subtitle-text">32-bit value</text>
+  
+  <!-- TX FIFO Block -->
+  <rect x="180" y="60" width="140" height="180" class="info-box" stroke-width="2" rx="5"/>
+  <text x="250" y="86" font-size="14" font-weight="bold" text-anchor="middle" class="info-text">TX FIFO</text>
+
+  
+  <!-- FIFO Slots (3 filled, 1 empty) -->
+  <rect x="195" y="105" width="110" height="30" class="tx-slot" stroke-width="1.5" rx="3"/>
+  <text x="250" y="125" font-size="10" text-anchor="middle" class="tx-text">0xAAAAAAAA</text>
+  
+  <rect x="195" y="140" width="110" height="30" class="tx-slot" stroke-width="1.5" rx="3"/>
+  <text x="250" y="160" font-size="10" text-anchor="middle" class="tx-text">0x55555555</text>
+  
+  <rect x="195" y="175" width="110" height="30" class="tx-slot" stroke-width="1.5" rx="3"/>
+  <text x="250" y="195" font-size="10" text-anchor="middle" class="tx-text">0xFF00FF00</text>
+  
+  <rect x="195" y="210" width="110" height="25" class="rx-slot" stroke-width="1" stroke-dasharray="3,3" rx="3"/>
+  <text x="250" y="226" font-size="9" text-anchor="middle" class="rx-text">empty</text>
+  
+  <!-- Arrow 2: FIFO to OSR -->
+  <line x1="320" y1="120" x2="400" y2="120" class="rx-arrow" stroke-width="2.5" marker-end="url(#arrowhead-autofill)"/>
+  <text x="360" y="110" font-size="11" font-weight="bold" text-anchor="middle" class="rx-text">auto-fill</text>
+  <text x="360" y="140" font-size="9" text-anchor="middle" class="rx-text">when OSR empty</text>
+  
+  <!-- OSR Block (moved down to align with CPU center) -->
+  <rect x="400" y="90" width="160" height="60" class="info-box" stroke-width="2" rx="5"/>
+  <text x="480" y="110" font-size="13" font-weight="bold" text-anchor="middle" class="info-text">Output Shift Register</text>
+  <text x="480" y="127" font-size="10" text-anchor="middle" class="info-detail">(OSR - 32 bits)</text>
+  
+  <!-- Bit visualization in OSR -->
+  <g transform="translate(410, 130)">
+    <rect x="0" y="0" width="8" height="12" class="tx-slot"/>
+    <rect x="10" y="0" width="8" height="12" class="tx-slot"/>
+    <rect x="20" y="0" width="8" height="12" class="rx-slot"/>
+    <rect x="30" y="0" width="8" height="12" class="rx-slot"/>
+    <rect x="40" y="0" width="8" height="12" class="tx-slot"/>
+    <text x="50" y="10" font-size="9" class="info-detail">...</text>
+    <rect x="60" y="0" width="8" height="12" class="rx-slot"/>
+    <rect x="70" y="0" width="8" height="12" class="tx-slot"/>
+    <rect x="80" y="0" width="8" height="12" class="tx-slot"/>
+    <rect x="90" y="0" width="8" height="12" class="rx-slot"/>
+    <rect x="100" y="0" width="8" height="12" class="tx-slot"/>
+    <rect x="110" y="0" width="8" height="12" class="rx-slot"/>
+  </g>
+  
+  <!-- Arrow 3: OSR to OUT instruction -->
+  <line x1="560" y1="120" x2="590" y2="120" class="connection-line" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- OUT Instruction Box (moved down to align with CPU center) -->
+  <rect x="590" y="90" width="75" height="60" class="sm-block" stroke-width="2" rx="5"/>
+  <text x="627.5" y="125" font-size="11" font-weight="bold" text-anchor="middle" class="sm-text">out pins, 1</text>
+  
+  <!-- Arrow 4: OUT to LED -->
+  <line x1="665" y1="120" x2="715" y2="120" class="connection-line" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="690" y="110" font-size="10" text-anchor="middle" class="subtitle-text">1 bit/cycle</text>
+  
+  <!-- LED (moved down to align with CPU center) -->
+  <g transform="translate(745, 120)">
+    <!-- LED outer circle -->
+    <circle cx="0" cy="0" r="30" class="rx-slot" stroke-width="2"/>
+    <!-- LED inner glow -->
+    <circle cx="0" cy="0" r="18" class="rx-slot" opacity="0.5"/>
+    <!-- Text -->
+    <text x="0" y="-5" font-size="10" font-weight="bold" text-anchor="middle" class="info-text">GPIO 15</text>
+    <text x="0" y="10" font-size="11" font-weight="bold" text-anchor="middle" class="info-text">LED</text>
+  </g>
+</svg>
