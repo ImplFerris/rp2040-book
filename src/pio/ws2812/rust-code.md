@@ -2,6 +2,14 @@
 
 Let us move on to the Rust part. 
 
+## Project
+
+Set up the project as usual.  Then add the following dependency, which we will use to calculate and configure the clock divider value:
+
+```toml
+fixed = "1.30.0"
+```
+
 ## Packing Color Data in GRB Format
 
 Before sending data to the WS2812, we need to pack the red, green, and blue values into a 32-bit value in the format expected by the LED.
