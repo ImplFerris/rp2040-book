@@ -1,0 +1,190 @@
+<!--
+Copyright (c) 2026 implrust.com
+All rights reserved.
+
+This SVG diagram is part of the ImplRust project.
+Website: https://implrust.com
+Github: https://github.com/ImplFerris/
+
+Permission is granted to use, copy, and modify this file for
+educational and documentation purposes, provided this notice
+is retained.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 310">
+  <style>
+    /* Light mode (default) */
+    .bg { fill: #ffffff; }
+    .title-text { fill: #333333; }
+    .subtitle-text { fill: #666666; }
+    .legend-text { fill: #333333; }
+    
+    .pulse-high { stroke: #2196F3; }
+    .pulse-high-fill { fill: #2196F3; }
+    .pulse-low { stroke: #666666; }
+    
+    .grid-line { stroke: #dddddd; }
+    .bracket-line { stroke: #333333; }
+    .bracket-text { fill: #666666; }
+    
+    .label-high { fill: #2196F3; }
+    .label-low { fill: #666666; }
+    .label-bit { fill: #333333; }
+    
+    .voltage-label { fill: #666666; }
+    .note-text { fill: #666666; }
+    
+    /* Dark mode */
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #1a1a1a; }
+      .title-text { fill: #E0E0E0; }
+      .subtitle-text { fill: #AAAAAA; }
+      .legend-text { fill: #E0E0E0; }
+      
+      .pulse-high { stroke: #42A5F5; }
+      .pulse-high-fill { fill: #42A5F5; }
+      .pulse-low { stroke: #888888; }
+      
+      .grid-line { stroke: #333333; }
+      .bracket-line { stroke: #AAAAAA; }
+      .bracket-text { fill: #AAAAAA; }
+      
+      .label-high { fill: #42A5F5; }
+      .label-low { fill: #888888; }
+      .label-bit { fill: #E0E0E0; }
+      
+      .voltage-label { fill: #AAAAAA; }
+      .note-text { fill: #AAAAAA; }
+    }
+  </style>
+  
+  <!-- Background -->
+  <rect width="800" height="310" class="bg"/>
+  
+  <!-- Title -->
+  <text x="400" y="30" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" class="title-text">
+    WS2812 Bit Timing
+  </text>
+    
+  <!-- BIT '0' Section -->
+  <text x="50" y="80" font-family="Arial, sans-serif" font-size="18" font-weight="bold" class="title-text">
+    BIT '0'
+  </text>
+  <text x="50" y="100" font-family="Arial, sans-serif" font-size="12" class="subtitle-text">
+    (Short HIGH, Long LOW)
+  </text>
+  
+  <!-- Waveform for '0' -->
+  <g>
+    <!-- Background grid -->
+    <line x1="50" y1="130" x2="350" y2="130" class="grid-line" stroke-width="1" stroke-dasharray="2,2"/>
+    <line x1="50" y1="110" x2="350" y2="110" class="grid-line" stroke-width="1" stroke-dasharray="2,2"/>
+    
+    <!-- Pulse -->
+    <polyline points="50,130 50,110 130,110 130,130 350,130" 
+              fill="none" class="pulse-high" stroke-width="3" stroke-linecap="square"/>
+    
+    <!-- Fill HIGH area -->
+    <polygon points="50,130 50,110 130,110 130,130" class="pulse-high-fill" opacity="0.2"/>
+    
+    <!-- Bit period bracket -->
+    <line x1="50" y1="145" x2="350" y2="145" class="bracket-line" stroke-width="2"/>
+    <line x1="50" y1="140" x2="50" y2="150" class="bracket-line" stroke-width="2"/>
+    <line x1="350" y1="140" x2="350" y2="150" class="bracket-line" stroke-width="2"/>
+    <text x="200" y="165" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" class="bracket-text">
+      Period for One Bit
+    </text>
+    
+    <!-- Labels -->
+    <text x="90" y="125" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" class="label-high" font-weight="bold">
+      SHORT
+    </text>
+    <text x="240" y="125" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" class="label-low">
+      LONG
+    </text>
+  </g>
+  
+  <!-- BIT '1' Section -->
+  <text x="450" y="80" font-family="Arial, sans-serif" font-size="18" font-weight="bold" class="title-text">
+    BIT '1'
+  </text>
+  <text x="450" y="100" font-family="Arial, sans-serif" font-size="12" class="subtitle-text">
+    (Long HIGH, Short LOW)
+  </text>
+  
+  <!-- Waveform for '1' -->
+  <g>
+    <!-- Background grid -->
+    <line x1="450" y1="130" x2="750" y2="130" class="grid-line" stroke-width="1" stroke-dasharray="2,2"/>
+    <line x1="450" y1="110" x2="750" y2="110" class="grid-line" stroke-width="1" stroke-dasharray="2,2"/>
+    
+    <!-- Pulse -->
+    <polyline points="450,130 450,110 618,110 618,130 750,130" 
+              fill="none" class="pulse-high" stroke-width="3" stroke-linecap="square"/>
+    
+    <!-- Fill HIGH area -->
+    <polygon points="450,130 450,110 618,110 618,130" class="pulse-high-fill" opacity="0.2"/>
+    
+    <!-- Bit period bracket -->
+    <line x1="450" y1="145" x2="750" y2="145" class="bracket-line" stroke-width="2"/>
+    <line x1="450" y1="140" x2="450" y2="150" class="bracket-line" stroke-width="2"/>
+    <line x1="750" y1="140" x2="750" y2="150" class="bracket-line" stroke-width="2"/>
+    <text x="600" y="165" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" class="bracket-text">
+      Period for One Bit
+    </text>
+    
+    <!-- Labels -->
+    <text x="534" y="125" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" class="label-high" font-weight="bold">
+      LONG
+    </text>
+    <text x="684" y="125" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" class="label-low">
+      SHORT
+    </text>
+  </g>
+  
+  <!-- Example sequence at bottom -->
+  <text x="400" y="210" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" class="title-text">
+    Example: Sending the pattern "1 0 1"
+  </text>
+  
+  <!-- Example waveform -->
+  <g>
+    <!-- Background grid -->
+    <line x1="100" y1="260" x2="700" y2="260" class="grid-line" stroke-width="1" stroke-dasharray="2,2"/>
+    <line x1="100" y1="240" x2="700" y2="240" class="grid-line" stroke-width="1" stroke-dasharray="2,2"/>
+    
+    <!-- Complete waveform: 1 0 1 -->
+    <polyline points="100,260 100,240 212,240 212,260 300,260 300,240 356,240 356,260 500,260 500,240 612,240 612,260 700,260" 
+              fill="none" class="pulse-high" stroke-width="3" stroke-linecap="square"/>
+    
+    <!-- Fill HIGH areas -->
+    <polygon points="100,260 100,240 212,240 212,260" class="pulse-high-fill" opacity="0.2"/>
+    <polygon points="300,260 300,240 356,240 356,260" class="pulse-high-fill" opacity="0.2"/>
+    <polygon points="500,260 500,240 612,240 612,260" class="pulse-high-fill" opacity="0.2"/>
+    
+    <!-- Bit labels -->
+    <text x="200" y="290" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" class="label-bit" font-weight="bold">1</text>
+    <text x="400" y="290" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" class="label-bit" font-weight="bold">0</text>
+    <text x="600" y="290" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" class="label-bit" font-weight="bold">1</text>
+    
+    <!-- Bit boundary dividers - with gap for signal -->
+    <!-- First divider (between bit 1 and bit 0) -->
+    <line x1="300" y1="225" x2="300" y2="237" class="bracket-line" stroke-width="1" stroke-dasharray="4,2"/>
+    <line x1="300" y1="263" x2="300" y2="285" class="bracket-line" stroke-width="1" stroke-dasharray="4,2"/>
+    
+    <!-- Second divider (between bit 0 and bit 1) -->
+    <line x1="500" y1="225" x2="500" y2="237" class="bracket-line" stroke-width="1" stroke-dasharray="4,2"/>
+    <line x1="500" y1="263" x2="500" y2="285" class="bracket-line" stroke-width="1" stroke-dasharray="4,2"/>
+    
+    <!-- Bit period markers -->
+    <line x1="100" y1="275" x2="300" y2="275" class="bracket-line" stroke-width="1"/>
+    <line x1="100" y1="273" x2="100" y2="277" class="bracket-line" stroke-width="1"/>
+    <line x1="300" y1="273" x2="300" y2="277" class="bracket-line" stroke-width="1"/>
+    
+    <line x1="300" y1="275" x2="500" y2="275" class="bracket-line" stroke-width="1"/>
+    <line x1="500" y1="273" x2="500" y2="277" class="bracket-line" stroke-width="1"/>
+    
+    <line x1="500" y1="275" x2="700" y2="275" class="bracket-line" stroke-width="1"/>
+    <line x1="700" y1="273" x2="700" y2="277" class="bracket-line" stroke-width="1"/>
+  </g>
+  
+</svg>
