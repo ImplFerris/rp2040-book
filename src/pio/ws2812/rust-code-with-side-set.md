@@ -85,15 +85,6 @@ HIGH = 3 + 3 = 6 cycles
 Total = 10 cycles
 ```
 
-Converted to time:
-
-```
-HIGH = 6 × 125 ns = 750 ns
-LOW = 4 × 125 ns = 500 ns
-```
-
-This aligns well with the nominal WS2812 logic 1 timing of approximately 700 ns HIGH and 600 ns LOW.
-
 ## Logic 0 Timing
 
 If the shifted bit is 0, the branch jumps to do_zero:
@@ -113,14 +104,7 @@ HIGH = 3 cycles
 Total = 10 cycles
 ```
 
-Converted to time:
-
-```
-HIGH = 3 × 125 ns = 375 ns
-LOW = 7 × 125 ns = 875 ns
-```
-
-Both logic paths consume exactly 10 cycles, so the bit period remains fixed at 1250 ns.
+Both logic paths consume exactly 10 cycles.
 
 ## Binding the Side-Set Pin
 
