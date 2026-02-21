@@ -158,6 +158,7 @@
         - [PIO Program](./pio/ws2812/pio-program.md)
         - [Code](./pio/ws2812/rust-code.md)
         - [Using Side Set](./pio/ws2812/rust-code-with-side-set.md)
+        - [Using Embassy](./pio/ws2812/using-embassy-smart-leds.md)
 <!-- - [Debugging](./debugging/index.md)
     - [GDB](./debugging/gdb/probe-rs-debug-probe.md)
         - [Finding main](./debugging/gdb/finding-main.md)
