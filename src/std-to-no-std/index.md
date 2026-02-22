@@ -29,7 +29,6 @@ Our goal is to reach the following final project structure:
 │   └── config.toml
 ├── Cargo.toml
 ├── memory.x
-├── rp235x_riscv.x
 ├── src
 │   └── main.rs
 ```
