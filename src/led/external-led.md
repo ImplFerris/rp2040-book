@@ -146,6 +146,7 @@ In this simulation I set the default delay to 5000 milliseconds so the animation
         <div class="line" data-index="4"><div class="num">5</div><div class="text">    led.set_low(); // Turn off the LED</div></div>
         <div class="line" data-index="5"><div class="num">6</div><div class="text">    Timer::after_millis(<span class="ms-val">5000</span>).await;</div></div>
         <div class="line" data-index="6"><div class="num">7</div><div class="text">}</div></div>
+      </div>
       <div class="progress-wrap">
         <div class="progress" aria-hidden="true"><div id="bar" class="bar"></div></div>
         <div class="progress-info"><div id="progress-label">Idle</div><div id="ms-left">0 ms</div></div>
