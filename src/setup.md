@@ -75,3 +75,21 @@ By default, debug probes on Linux can only be accessed with root privileges. To 
 4. Unplug and replug your Debug Probe
 
 After this setup, you can use probe-rs without root privileges.
+
+## NixOS
+All these same steps can be achieved on NixOS with the use of some configuration. The project template already comes with [a `flake.nix` file](https://github.com/ImplFerris/rp2040-embassy-template/blob/main/flake.nix) so Rust targets are already set up, just run `direnv allow` and the Nix Flake will be automagically activated.
+
+Regarding the use of debug probes, that requires more work with setting up udev rules using [probe-rs-rules](https://github.com/jneem/probe-rs-rules) alongside adding your user to the `plugdev` group as follows:
+
+```nix
+users = {
+  # You may not need this if the plugdev group already exists
+  groups = {
+    plugdev = { };
+  };
+
+  users.username.extraGroups = [
+    "plugdev"
+  ];
+};
+```
