@@ -1,3 +1,5 @@
+{{#title RP2040 Embedded Rust Setup with Picotool and probe-rs}}
+
 # Setup
 
 ## Picotool

@@ -1,3 +1,5 @@
+{{#title RP2040 PIO Clock Divider and Instruction Timing Explained}}
+
 # Clock Divider
 
 > **TL;DR**

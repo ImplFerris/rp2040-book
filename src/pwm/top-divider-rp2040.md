@@ -1,3 +1,5 @@
+{{#title Understanding PWM TOP and Clock Divider on RP2040 in Embedded Rust}}
+
 # PWM's Top and Divider
 
 Sometimes you need to specify a precise frequency for PWM output. For example, hobby servos typically operate at 50Hz. However, neither embassy-rp nor rp-hal provide a straightforward method to set the frequency directly (at least to my knowledge). Instead, we need to work with the underlying PWM hardware configuration. The embassy-rp crate allows you to configure PWM through a `Config` struct that has various fields, with our focus being on the top and divider parameters. Let's explore how these work.

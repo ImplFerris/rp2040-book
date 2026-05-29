@@ -1,3 +1,5 @@
+{{#title Components for RP2040 Embedded Rust Projects}}
+
 # Components
 
 In this book, we will use various external components together with the Pico to build examples and experiments. These components are used to interact with the outside world, such as reading inputs, controlling outputs, and displaying information.

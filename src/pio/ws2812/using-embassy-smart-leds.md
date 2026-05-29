@@ -1,3 +1,5 @@
+{{#title Using Embassy's Built-In WS2812 Driver on RP2040}}
+
 # Using Embassy and Smart LEDs crate
 
 So far, we implemented the WS2812 driver manually. We wrote the PIO program ourselves, calculated the timing in instruction cycles, configured the clock divider, and pushed raw 24-bit values into the TX FIFO.

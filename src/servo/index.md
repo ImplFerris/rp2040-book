@@ -1,3 +1,5 @@
+{{#title Servo Motor Control with Raspberry Pi Pico in Embedded Rust}}
+
 # Servo Motors
 
 Servo motors let you control position accurately. You might use them to point a camera, move parts of a small robot, or control switches automatically. They're different from regular DC motors. Instead of spinning continuously, a servo moves to a specific angle and stays there.

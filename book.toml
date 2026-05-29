@@ -1,5 +1,6 @@
 [book]
-title = "impl Rust for Pico - Embedded Programming with Rust"
+title = "Embedded Rust with Raspberry Pi Pico"
+description = "Free Book on Embedded Rust programming on Raspberry Pi Pico(RP2040) with hands-on examples with sensors, servo motor, rfid and more."
 authors = ["ImplFerris"]
 language = "en"
 src = "src"

@@ -1,3 +1,5 @@
+{{#title Using PIO FIFO on Raspberry Pi Pico to Send Bit Sequences}}
+
 # Using PIO FIFO on Raspberry Pi Pico to Send Bit Sequences
 
 Generate a new project using the custom Embassy template.

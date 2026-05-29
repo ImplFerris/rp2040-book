@@ -1,3 +1,5 @@
+{{#title Using PIO Scratch Registers X and Y on RP2040}}
+
 # Scratch Registers
 
 So far, all of our delays were created using `nop`. That works, but it wastes a lot of instructions. This is where scratch registers become useful.

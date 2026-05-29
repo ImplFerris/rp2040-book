@@ -1,3 +1,4 @@
+{{#title Using PIO for LED Blinking on RP2040 with Embedded Rust}}
 
 # Using PIO for LED Blinking on Raspberry Pi Pico in Embedded Rust
 

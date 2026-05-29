@@ -1,3 +1,5 @@
+{{#title PIO Assembly Programming on Raspberry Pi Pico: LED Blink Project}}
+
 # Using PIO for LED Blinking on Raspberry Pi Pico
 
 If we start explaining every instruction and internal detail right away, this quickly turns into documentation rather than a book. The RP2040 datasheet already does that job well. So instead, let us get straight into action.

@@ -1,3 +1,5 @@
+{{#title How PIO State Machines Work on Raspberry Pi Pico RP2040}}
+
 # How PIO works in Raspberry Pi Pico?
 
 > **TL;DR**

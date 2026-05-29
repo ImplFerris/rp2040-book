@@ -1,3 +1,5 @@
+{{#title Rust code to LED Dimming on Raspberry Pi Pico with Embassy}}
+
 # LED Dimming on Raspberry Pi Pico with Embassy
 
 Let's create a dimming LED effect using PWM on the Raspberry Pi Pico with Embassy.

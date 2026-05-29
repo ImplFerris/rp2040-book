@@ -1,3 +1,4 @@
+{{#title Embedded Rust code to Blink an LED on the Raspberry Pi Pico}}
 
 # Blink an External LED on the Raspberry Pi Pico with Embedded Rust
 

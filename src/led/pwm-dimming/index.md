@@ -1,3 +1,5 @@
+{{#title Dimming an LED with PWM on Raspberry Pi Pico in Embedded Rust}}
+
 # Dimming LED
 
 In this section, we will learn how to create a dimming effect, that is reducing and increasing the brightness gradually, for an LED using the Raspberry Pi Pico. Here we will use an external LED connected to GPIO15, with the circuit being the same as in the [External LED section](../external-led.md).

@@ -1,3 +1,5 @@
+{{#title Mapping WS2812 Timing to RP2040 PIO Instruction Cycles}}
+
 # Mapping the Bit Period into Instruction Cycles
 
 The WS2812 protocol defines timing in nanoseconds. In a PIO program, however, we cannot directly specify a delay like "wait 350 ns." Timing is controlled through instruction cycles.

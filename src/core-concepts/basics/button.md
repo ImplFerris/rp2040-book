@@ -1,3 +1,5 @@
+{{#title Using Push Buttons with Raspberry Pi Pico in Embedded Rust}}
+
 # Buttons  
 
 Now that we know how to blink an LED, let's learn how to read input from a button. This will let us interact with our Raspberry Pi Pico and make our programs respond to what we do.

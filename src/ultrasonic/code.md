@@ -1,3 +1,5 @@
+{{#title Rust Tutorial: Using the HC-SR04 Sensor with the Pico}}
+
 # Rust Tutorial: Using the HC-SR04 Sensor with the Pico
 
 As usual, generate the project from the template with cargo-generate:

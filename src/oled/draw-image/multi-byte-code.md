@@ -1,4 +1,6 @@
-## Drawing a Multi-Byte Image in Embedded Rust using embedded-graphics
+{{#title Multi-Byte Image Rendering on Raspberry Pi Pico OLED in Embedded Rust}}
+
+# Drawing a Multi-Byte Image in Embedded Rust using embedded-graphics
 
 Now let's write the code to display a wider image on our OLED screen. The main changes from the previous example are the image data and the width value. This time, we'll display a resistor symbol in the IEC-60617 style.
 

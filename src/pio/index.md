@@ -1,3 +1,5 @@
+{{#title Getting Started with PIO on RP2040 for Embedded Rust}}
+
 # PIO on Raspberry Pi Pico
 
 This is one of the features I avoided for a long time on the Raspberry Pi Pico, yet it is one of the most powerful and unique features of the chip. Not because it was difficult to understand, but because it was not clear where it actually fit.

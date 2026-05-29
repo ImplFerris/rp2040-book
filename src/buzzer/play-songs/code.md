@@ -1,4 +1,4 @@
-## Playing the Game of Thrones Melody
+# Playing the Game of Thrones Melody
 
 In this section, we put everything together and work in the main.rs file.
 

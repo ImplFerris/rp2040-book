@@ -1,3 +1,5 @@
+{{#title Raspberry Pi Pico RP2040 Pinout Guide}}
+
 # Raspberry Pi Pico Pinout Diagram
 
 > [!TIP]

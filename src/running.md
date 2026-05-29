@@ -1,3 +1,5 @@
+{{#title Running RP2040 Embedded Rust Programs with cargo run and probe-rs}}
+
 # Running the program
 
 Before moving on to more examples, we will cover the basic steps to build and run a program on the Raspberry Pi Pico (RP2040).

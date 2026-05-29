@@ -1,3 +1,5 @@
+{{#title Embedded Rust with Raspberry Pi Pico (RP2040) Projects Book}}
+
 # Intro
 
 In this book, we use the Raspberry Pi Pico and program it in Rust to explore various exciting projects. You will work on exercises like dimming an LED, controlling a servo motor, measuring distance with a sonic sensor, displaying the Ferris (🦀) image on an OLED display, using an RFID reader, playing songs on a buzzer, turning on an LED when the room light is off, measuring temperature, and much more.

@@ -1,3 +1,5 @@
+{{#title Accessing FAT32 SD Cards with Raspberry Pi Pico and Rust}}
+
 # Read SD Card with Raspberry Pi Pico
  
 In this chapter, we are going to read a file from a microSD card and print its contents. Before continuing, you will need an SD card that is already formatted as FAT32, and it must contain a file named RUST.TXT. For this example, you can put the text Ferris inside.

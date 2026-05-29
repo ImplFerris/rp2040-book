@@ -1,3 +1,5 @@
+{{#title Using SSD1306 OLED Display with Embassy and RP2040}}
+
 # Hello OLED
 
 We are going to keep things simple. We will just display "Hello, Rust!" on the OLED display.

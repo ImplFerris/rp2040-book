@@ -1,3 +1,5 @@
+{{#title Controlling WS2812 NeoPixel LEDs with RP2040 PIO and Embedded Rust}}
+
 # WS2812 (NeoPixel) with PIO on Raspberry Pi Pico in Embedded Rust
 
 In the previous chapter, we learned how data moves from the CPU to the PIO state machine using the TX FIFO. We shifted simple bit sequences to an LED. Now we will use the same concept to drive a WS2812 LED ring.

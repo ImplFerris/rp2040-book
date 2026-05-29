@@ -1,4 +1,6 @@
-## Ferris on LCD Display
+{{#title Drawing Ferris with Custom LCD Characters in Embedded Rust}}
+
+# Ferris on LCD Display
 
 In this section, we will draw Ferris on a character LCD. This is my attempt at making it look like a crab. If you come up with a better design, feel free to send a pull request.
 

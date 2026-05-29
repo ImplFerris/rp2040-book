@@ -1,3 +1,5 @@
+{{#title Implementing the WS2812 Protocol with RP2040 PIO}}
+
 # PIO Program to Control WS2812 LEDs
 
 Now that we have mapped the 1250 ns bit period into instruction cycles, we can implement the PIO program for the WS2812.

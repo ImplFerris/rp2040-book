@@ -1,3 +1,5 @@
+{{#title Using an HD44780 LCD Display with RP2040 and Embedded Rust}}
+
 # "Hello, Rust!" in LCD Display
 
 We will create a simple program that prints "Hello, Rust!" on the LCD screen. This helps us quickly check that the wiring, I2C setup, and LCD configuration are correct before moving on to the next exercise.

@@ -1,3 +1,5 @@
+{{#title Displaying Temperature on an OLED Using Embedded Rust on Raspberry Pi Pico}}
+
 # Displaying Temperature on an OLED Using Embedded Rust on Raspberry Pi Pico
 
 In this chapter, we are going to read temperature from a thermistor and display it on an OLED screen.

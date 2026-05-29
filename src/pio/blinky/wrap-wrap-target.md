@@ -1,3 +1,5 @@
+{{#title Using .wrap Directives in Raspberry Pi Pico PIO Assembly}}
+
 # Looping PIO Programs Using .wrap and .wrap_target directive
 
 In the previous chapter, we looped our PIO program using the `jmp` instruction. That approach works well and makes control flow obvious.

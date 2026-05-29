@@ -1,3 +1,5 @@
+{{#title RP2040 Interrupts and Async I2C with Embassy Rust}}
+
 # Using Interrupts with Embassy
 
 In the previous chapter, we looked at what interrupts are and how the NVIC fits into the picture. Now let's see how interrupts are actually used in Embassy.

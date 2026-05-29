@@ -1,4 +1,4 @@
-## Changing the Authentication Key
+# Changing the Authentication Key
 
 In this chapter, we change the authentication key for a sector. Specifically, we update Key A of sector 1. By default, both Key A and Key B on a MIFARE Classic 1K card are set to FF FF FF FF FF FF. We will replace Key A with the value 52 75 73 74 65 64, which is the hex representation of the ASCII string "Rusted".
 

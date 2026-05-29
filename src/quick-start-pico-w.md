@@ -1,3 +1,5 @@
+{{#title Raspberry Pi Pico W Embedded Rust LED Blink Quick Start}}
+
 # Quick Start - Simple LED Blinky on Pico W
 
 If you are using a Pico board without wireless support, you can skip this chapter. This quick start is specific to Raspberry Pi Pico W and focuses on getting a basic LED blink working with Rust.

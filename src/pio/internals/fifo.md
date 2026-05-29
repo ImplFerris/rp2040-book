@@ -1,3 +1,5 @@
+{{#title RP2040 PIO FIFO: Moving Data Between the CPU and State Machines}}
+
 # FIFO: Moving Data Between the CPU and PIO
 
 So far, we have seen PIO state machines execute instructions and manipulate GPIO pins. These examples used fixed patterns, where everything was hardcoded inside the PIO program.

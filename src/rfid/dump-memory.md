@@ -1,4 +1,4 @@
-## Dump Entire Memory
+# Dump Entire Memory
 
 So far, you have learned how to authenticate a sector and read the blocks inside it. In the previous chapter, we limited ourselves to sector 0. In this chapter, we extend that approach to dump the entire memory of the tag.
 

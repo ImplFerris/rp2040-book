@@ -1,3 +1,4 @@
+{{#title Understanding Side Set in Raspberry Pi Pico PIO}}
 
 # Side Set
 

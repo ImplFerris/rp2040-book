@@ -1,3 +1,5 @@
+{{#title LED Control with Push Button on Raspberry Pi Pico in Embedded Rust}}
+
 # LED on Button Press
 
 Let's build a simple project that turns on an LED whenever the button is pressed. We will use GPIO 14 as a button input with an internal pull-up resistor, and another GPIO pin 15 as an output to drive the LED. When the button is pressed, the input pin goes LOW and the LED is turned on. When the button is released, the input pin goes HIGH and the LED turns off.

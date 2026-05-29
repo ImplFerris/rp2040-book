@@ -1,3 +1,5 @@
+{{#title RP2040 Embedded Rust Linker Script and memory.x Explained}}
+
 # Linker Script
 
 The program now compiles successfully. However, when you attempt to flash it onto the Pico, you may encounter an error like the following:

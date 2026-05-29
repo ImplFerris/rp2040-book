@@ -1,3 +1,5 @@
+{{#title Raspberry Pi Pico PIO FIFO Data Flow Example with LED Output}}
+
 # Single LED with FIFO
 
 I know you are eager to try NeoPixel and use PIO with it. So am I. But before we do that, we will use a simple LED with FIFO.

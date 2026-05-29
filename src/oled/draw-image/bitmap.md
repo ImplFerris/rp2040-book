@@ -1,3 +1,5 @@
+{{#title Using tinybmp with Raspberry Pi Pico OLED in Embedded Rust}}
+
 # Using Bitmap Image file
 
 You can use BMP (.bmp) files directly instead of raw image data by utilizing the [tinybmp](https://docs.rs/tinybmp/latest/tinybmp/) crate. tinybmp is a lightweight BMP parser designed for embedded environments. While it is mainly intended for drawing BMP images to embedded_graphics DrawTargets, it can also be used to parse BMP files for other applications.

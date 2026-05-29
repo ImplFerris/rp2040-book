@@ -1,3 +1,5 @@
+{{#title WS2812 Control on RP2040 Using PIO Side-Set in Rust}}
+
 # WS2812 Control on RP2040 Using PIO Side-Set in Rust
 
 In this section, we implement the WS2812 control logic again, but this time using the side-set feature of the PIO instruction set.

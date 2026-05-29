@@ -1,3 +1,5 @@
+{{#title RP2040 Embedded Rust Quick Start with Embassy LED Blink Example}}
+
 # Quick Start
 
 Before diving into the theory and concepts of how everything works, let's jump straight into action. Use this simple code to turn on the onboard LED of the Pico.

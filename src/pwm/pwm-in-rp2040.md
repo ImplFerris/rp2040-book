@@ -1,3 +1,5 @@
+{{#title RP2040 PWM Peripheral and GPIO PWM Mapping in Embedded Rust}}
+
 # PWM Peripheral in RP2040
 
 The RP2040 has a PWM peripheral with 8 PWM generators called slices. Each slice contains two output channels (A and B), giving you a total of 16 PWM output channels at the slice level, which can be routed to GPIO pins. For detailed specifications, see page 521 of the [RP2040 Datasheet](https://datasheets.raspberrypi.com/rp2040/rp2040-datasheet.pdf#page=522).

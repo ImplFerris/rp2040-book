@@ -1,3 +1,5 @@
+{{#title RP2040 Embedded Rust RTT Logging with Defmt and probe-rs}}
+
 # Real-Time Transfer (RTT)
 
 When developing embedded systems, you need a way to see what's happening inside your program. On a normal computer, you would use println! to print messages to the terminal. But on a microcontroller, there's no screen or terminal attached. Real-Time Transfer (RTT) solves this problem by letting you print debug messages and logs from your microcontroller to your computer.

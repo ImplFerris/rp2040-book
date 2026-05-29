@@ -1,3 +1,5 @@
+{{#title Understanding RP2040 Interrupts and IRQ Vectors in Embedded Rust}}
+
 # Interrupts in the RP2040
 
 In the previous chapter, we looked at what interrupts are and the role of the NVIC. Now, lets look at which interrupts are actually available on the RP2040.

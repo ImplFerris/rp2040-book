@@ -1,3 +1,5 @@
+{{#title Raspberry Pi Pico W Introduction for Embedded Rust}}
+
 # Pico W Introduction
 
 So far, we have seen examples that work on both the Pico and Pico W boards, since both are based on the RP2040 chip. Most of the exercises we have covered run the same way on either board. As mentioned earlier, the Pico W includes an additional chip, the CYW43439, which provides wireless connectivity. From this point onward, the exercises will apply only to the Pico W and not to the standard Pico board.

@@ -1,3 +1,5 @@
+{{#title USB Serial Logging with Embassy on Raspberry Pi Pico}}
+
 # USB Serial Logging with Embassy on Raspberry Pi Pico
 
 In this chapter, we will look at a simple way to log messages from the Raspberry Pi Pico to the system console using USB serial. We will use the USB interface along with the embassy-usb-logger crate to send log output to the host.

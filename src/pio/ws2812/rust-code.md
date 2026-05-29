@@ -1,3 +1,5 @@
+{{#title Controlling WS2812 NeoPixels with RP2040 PIO and Embedded Rust}}
+
 # Code to Control WS2812 Using Raspberry Pi Pico's PIO in Embedded Rust
 
 Let us move on to the Rust part. 

@@ -1,3 +1,5 @@
+{{#title Write Embedded Rust code to Display Temperature on OLED Display}}
+
 # Write Embedded Rust code to Display Temperature on OLED Display
 
 In this section, we move to the coding part.  We write the code that reads the thermistor value using the ADC, converts it into temperature using the B equation, and displays the result on the OLED over I2C.

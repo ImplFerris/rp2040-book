@@ -1,3 +1,5 @@
+{{#title How WS2812 NeoPixel LEDs Work with RP2040 PIO}}
+
 # How WS2812 Works?
 
 The WS2812 uses a single data line and encodes information entirely in timing. There is no clock signal. The duration of the HIGH pulse determines whether the bit represents 0 or 1.

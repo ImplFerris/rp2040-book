@@ -1,4 +1,6 @@
-## OLED Display
+{{#title Using SSD1306 OLED Display with RP2040 and Embedded Rust}}
+
+# OLED Display
 
 In this section, we'll learn how to connect an OLED display module to the Raspberry Pi Pico. OLED displays are one of the most fun components to work with because they open up so many creative possibilities. You can build games, create dashboards, or display sensor readings in a visual way.
 
