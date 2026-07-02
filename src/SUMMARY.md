@@ -169,5 +169,6 @@
 # 🛜 Pico W
 
 - [Pico W Introduction](./pico-w/introduction.md)
+    - [Pico W CYW43439 Wiring](./pico-w/cyw43439-pin-to-pico-w.md)
 
 - [Resources](./resources.md)
