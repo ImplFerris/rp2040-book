@@ -17,6 +17,12 @@ In the above example, the CPU configures the DMA controller by specifying the so
 
 Although this example shows a memory-to-peripheral transfer, DMA is not limited to this direction. It can also transfer data from a peripheral to memory, such as storing ADC samples or received UART data into a buffer. Some DMA controllers also support memory-to-memory transfers.
 
+## DMA Channels
+
+A DMA controller can perform more than one transfer. To make this possible, it provides one or more DMA channels. Each channel operates independently and can be configured to perform a different transfer.
+
+The RP2040 provides 12 DMA channels, allowing multiple data transfers to take place independently when needed. In many applications, however, you'll only use one or two channels.
+
 ## DMA in Embassy
 
 Most of the time, you won't interact with the DMA controller directly. Instead, Embassy drivers use DMA internally whenever it improves performance. In many cases, all you need to do is provide a DMA channel when creating the driver.
@@ -34,6 +40,6 @@ let mut ws2812 = PioWs2812::new(
 );
 ```
 
-The DMA_CH0 parameter tells the driver which DMA channel to use. The driver configures the DMA controller internally and transfers the pixel data automatically. Your application never needs to configure DMA registers or manually move the pixel data.
+The DMA_CH0 parameter tells the driver to use DMA channel 0. The driver configures the DMA controller internally and transfers the pixel data automatically. Your application never needs to configure DMA registers or manually move the pixel data.
 
 The same idea appears again later when working with the Pico W. The Wi-Fi driver also uses DMA internally to transfer data efficiently, allowing the CPU to perform other tasks while the transfer is in progress.
