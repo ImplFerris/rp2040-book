@@ -141,6 +141,7 @@
     - [Pin layout](./joystick/pin-layout.md)
     - [Circuit](./joystick/circuit.md)
     - [Print ADC Values](./joystick/print-adc-values.md)
+- [DMA](./dma/index.md)
 - [PIO](./pio/index.md)
     - [How it works?](./pio/how-it-works.md)
         - [Clock Divider](./pio/internals/clock-divider.md)
