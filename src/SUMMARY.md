@@ -171,5 +171,9 @@
 
 - [Pico W Introduction](./pico-w/introduction.md)
     - [Pico W CYW43439 Wiring](./pico-w/cyw43439-pin-to-pico-w.md)
-
+- [Blinking the Onboard LED](./pico-w/blinking-onboard-led.md)
+    - [PIO and SPI](./pico-w/pio-spi-cyw43.md)
+    - [CYW43439 Firmware](./pico-w/cyw43439-firmware.md)
+    - [CYW43 Driver](./pico-w/cyW43-rust-driver.md)
+    - [Final](./pico-w/cyw43-control-onboard-led.md)
 - [Resources](./resources.md)
