@@ -29,7 +29,7 @@ This gives us access to one of the RP2040's PIO blocks.
 
 Finally, we create the PIO-based SPI interface.
 
-The `PioSpi` type is provided by the `cyw43-pio` crate. It implements the SPI protocol using one of the RP2040's PIO state machines. Although its constructor accepts several parameters, most of them should already be familiar. We provide the PIO state machine, the chip select pin, the SPI pins, and a DMA channel to create a communication interface between the RP2040 and the CYW43439.
+The `PioSpi` type is provided by the `cyw43-pio` crate. It implements the SPI protocol using one of the RP2040's PIO state machines. Although its constructor accepts several parameters, most of them should already be familiar. We provide the PIO state machine, the chip select pin, the data and clock pins, and a DMA channel to create a communication interface between the RP2040 and the CYW43439.
 
 ```rust
 let spi = PioSpi::new(
