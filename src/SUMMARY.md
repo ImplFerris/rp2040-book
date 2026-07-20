@@ -176,4 +176,13 @@
     - [CYW43439 Firmware](./pico-w/cyw43439-firmware.md)
     - [CYW43 Driver](./pico-w/cyW43-rust-driver.md)
     - [Final](./pico-w/cyw43-control-onboard-led.md)
+
+- [Connecting to a Wi-Fi Network](./pico-w/http-client/index.md)
+    - [Setting Up the Project](./pico-w/http-client/project-setup.md)
+    - [Wi-Fi Module](./pico-w/http-client/wifi-module.md)
+    - [Creating the HTTP Client](./pico-w/http-client/http-module/index.md)
+        - [Request and Response](./pico-w/http-client/http-module/request-response.md)
+        - [Parsing the JSON Response](./pico-w/http-client/http-module/json-parser.md)
+
 - [Resources](./resources.md)
+

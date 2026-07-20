@@ -138,13 +138,6 @@ async fn main(spawner: Spawner) {
 
 The goal of this chapter is simply to blink the onboard LED and get familiar with flashing code and seeing it run on the hardware. Do not worry if you do not understand all parts of the code yet; we will explain them later.
 
-## Clone the Quick start project
-
-```sh
-git clone https://github.com/ImplFerris/pico-w-quick
-cd pico-w-quick
-```
-
 ## How to Run?
 
 To Flash your application onto the Pico, press and hold the BOOTSEL button. While holding it, connect the Pico to your computer using a micro USB cable. You can release the button once the USB is plugged in.
