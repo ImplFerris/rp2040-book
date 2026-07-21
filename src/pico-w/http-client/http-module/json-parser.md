@@ -99,13 +99,6 @@ If the JSON is parsed successfully, we log a success message and print the slide
 If parsing fails, we log the error and print a preview of the response body. While writing this chapter, I opened the URL in my browser and found that "httpbin.org" site was temporarily returning an HTML error page instead of JSON. In such cases, the response preview can help you quickly identify the problem.
 
 
-## Clone the Quick start project
-
-```sh
-git clone https://github.com/ImplFerris/pico-w-quick
-cd pico-w-quick
-```
-
 ## Running the Program
 
 Now, call the `fetch_json` function from `main`:
