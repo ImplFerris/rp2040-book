@@ -92,6 +92,8 @@ pub fn init_net_stack(
 }
 ```
 
+The `StackResources<5>` parameter specifies the memory reserved for socket slots. In this example, we allocate space for five socket slots. Since DHCP and DNS each require one socket slot, and our HTTP client also needs one, 3 is the minimum that would work. We reserve five socket slots in the project template to provide a little extra room for the networking examples later in the book without needing to change this value. You can experiment with different values. For example, after finishing this tutorial, try changing the value to 2 and see what happens.
+
 The networking stack consists of two parts: a `Stack` and a `Runner`. The `Stack` is the handle that the rest of the application uses to access networking features such as TCP, UDP,and DHCP. Later in this tutorial, we will pass the `Stack` to the HTTP client so it can send and receive data over the network.
 
 The `Runner` runs the networking stack in the background. It continuously processes incoming and outgoing packets, manages the network protocols.
