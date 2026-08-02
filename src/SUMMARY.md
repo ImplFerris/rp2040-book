@@ -183,6 +183,11 @@
     - [Creating the HTTP Client](./pico-w/http-client/http-module/index.md)
         - [Request and Response](./pico-w/http-client/http-module/request-response.md)
         - [Parsing the JSON Response](./pico-w/http-client/http-module/json-parser.md)
-
+- [Web Server](./pico-w/web-server/index.md)
+    - [Seting Up the Project](./pico-w/web-server/build-project.md)
+    - [Server Module](./pico-w/web-server/server-module/index.md)
+        - [Router](./pico-w/web-server/server-module/router.md)
+        - [Serving](./pico-w/web-server/server-module/starting-web-server.md)
+    - [Flash](./pico-w/web-server/flashing.md)
 - [Resources](./resources.md)
 

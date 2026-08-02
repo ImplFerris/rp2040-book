@@ -115,4 +115,7 @@ Don't forget to provide your Wi-Fi credentials as environment variables when fla
 
 ```sh
 SSID=YOUR_WIFI PASSWORD=YOUR_WIFI_PASSWORD cargo embed --release
+
+# Reduce cyw43 log noise
+SSID=YOUR_WIFI PASSWORD=YOUR_WIFI_PASSWORD DEFMT_LOG="info,cyw43=warn" cargo embed --release
 ```

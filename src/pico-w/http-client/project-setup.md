@@ -61,6 +61,9 @@ Whenever you build or flash the program, make sure to provide these environment 
 SSID=YOUR_WIFI PASSWORD=YOUR_WIFI_PASSWORD cargo build --release
 # for flashing
 # SSID=YOUR_WIFI PASSWORD=YOUR_WIFI_PASSWORD cargo embed --release
+
+# Reduce cyw43 log noise
+SSID=YOUR_WIFI PASSWORD=YOUR_WIFI_PASSWORD DEFMT_LOG="info,cyw43=warn" cargo build --release
 ```
 
 ## The Main
